@@ -47,6 +47,6 @@
              (cond
                (number? c) (constant c)
                (list? c)
-               (apply (get operations (first c)) (mapv (fn [i] (parse i)) (rest c)))
+                     (apply (get operations (first c)) (mapv (fn [i] (parse i)) (rest c)))
                (symbol? c) (variable (str c)))
              ) (read-string string)))
